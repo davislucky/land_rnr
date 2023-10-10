@@ -50,4 +50,16 @@ ApplicationRecord.transaction do
         birth_date: '1994-07-15'
     )
     puts "Done!"
+
+#     signupRequestOptions = {
+#     method: 'POST',
+#     headers: { 'Content-Type': 'application/json' },
+#     body: JSON.stringify({ 
+#       email: 'coolemail@hotmail.net', 
+#       first_name: 'cool',
+#       last_name: 'user',
+#       birth_date: '1994-07-15',
+#       password: 'starwars'
+#     })
+#   }
 end

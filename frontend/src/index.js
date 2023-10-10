@@ -6,25 +6,25 @@ import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
 import configureStore from './store';
 
-const store = configureStore();
+// const store = configureStore();
 
-if (process.env.NODE_ENV !== 'production') {
-  window.store = store;
-}
+// if (process.env.NODE_ENV !== 'production') {
+//   window.store = store;
+// }
 
-function Root() {
-  return (
-    <Provider store={store}>
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
-    </Provider>
-  );
-}
+// function Root() {
+//   return (
+//     <Provider store={store}>
+//       <BrowserRouter>
+//         <App />
+//       </BrowserRouter>
+//     </Provider>
+//   );
+// }
 
 ReactDOM.render(
   <React.StrictMode>
-    <Root />
+    <App />
   </React.StrictMode>,
   document.getElementById('root')
 );
