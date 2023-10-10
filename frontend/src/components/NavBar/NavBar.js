@@ -5,9 +5,16 @@ import SearchRoundedIcon from '@mui/icons-material/SearchRounded';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import MenuRoundedIcon from '@mui/icons-material/MenuRounded';
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import ProfileDropdown from "../ProfileDropdown/ProfileDropdown";
+import { useState } from "react";
 
 
-const navbar = () => {
+const NavBar = () => {
+
+    // const [open, setOpen] = useState(false);
+
     return (
         <div className="navbar">
             <img src={logo} alt='logo' className="navbar-logo"></img>
@@ -26,10 +33,13 @@ const navbar = () => {
                 <div className="linkedin-link">
                     <FontAwesomeIcon className="linkedin-icon" icon={faLinkedin} style={{color: "#ff2600",}} />
                 </div>
-                <div className="profile-dropdown"></div>
+                <div className="profile-dropdown" >
+                    
+                    <ProfileDropdown />
+                </div>
             </div>
         </div>
     )
 }
 
-export default navbar;
+export default NavBar;

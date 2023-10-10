@@ -1,0 +1,13 @@
+.profile-dropdown {
+    border: 0.5px solid var(--grey);
+    border-radius: 60px;
+    cursor: pointer;
+}
+
+.menu-rounded-icon {
+    color: #222222
+}
+
+.account-circle-icon {
+    color: var(--font-grey)
+}
