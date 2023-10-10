@@ -17,9 +17,9 @@
     justify-content: flex-start;
     align-items: center;
     gap: 0.5rem;
-    padding: 0.75rem 1rem;
+    padding: 0.4rem 1rem;
     border: 0.5px solid var(--grey);
-    border-radius: 20px;
+    border-radius: 60px;
     box-shadow: 0 1px 2px rgb(0 0 0 / 8%), 0 4px 12px rgb(0 0 0 / 5%);
 }
 
@@ -41,4 +41,40 @@
     font-weight: 600;
     padding-right: 0.5rem;
     color: var(--font-grey)
+}
+
+
+.search-icon-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 56, 92);
+    color: white;
+    padding: 0.14rem;
+    border-radius: 50%;
+}
+
+.github-icon {
+    cursor: pointer;
+    height: 2rem;
+}
+
+.github-icon:hover {
+    background-color: var(--hover-grey);
+}
+
+.session-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.linkedin-icon {
+    cursor: pointer;
+    height: 2rem;
+}
+
+.linkedin-icon:hover {
+    background-color: var(--hover-grey);
 }
