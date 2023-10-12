@@ -5,15 +5,12 @@ import SearchRoundedIcon from '@mui/icons-material/SearchRounded';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import MenuRoundedIcon from '@mui/icons-material/MenuRounded';
-import AccountCircleIcon from '@mui/icons-material/AccountCircle';
-import ProfileDropdown from "./ProfileDropdown/ProfileDropdown";
-import { useState } from "react";
+import LoginForm from "../LoginFormPage/LoginForm";
+import ProfileButton from "./ProfileButton/ProfileButton";
+
 
 
 const NavBar = () => {
-
-    // const [open, setOpen] = useState(false);
 
     return (
         <div className="navbar">
@@ -34,8 +31,8 @@ const NavBar = () => {
                     <FontAwesomeIcon className="linkedin-icon" icon={faLinkedin} style={{color: "#ff2600",}} />
                 </div>
                 <div className="profile-button" >
-                    
-                    <ProfileDropdown />
+                    <ProfileButton />
+                    {/* <LoginForm /> */}
                 </div>
             </div>
         </div>
