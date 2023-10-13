@@ -5,14 +5,14 @@ import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import './ProfileDropdown.css'
 import { useDispatch, useSelector } from "react-redux";
 import * as sessionActions from '../../../store/session';
-import LoginFormModal from "../../LoginFormPage";
+import { openModal } from "../../../store/modal";
 
 
 function ProfileButton() {
   const dispatch = useDispatch();
   const [showMenu, setShowMenu] = useState(false);
   const sessionUser = useSelector((state) => state.session.user);
-  const [showModal, setShowModal] = useState(false);
+ 
 
   const openMenu = () => {
     if (showMenu) return;
@@ -36,8 +36,12 @@ function ProfileButton() {
     dispatch(sessionActions.logout());
   }
 
-  const handleModal = (e) => {
-    setShowModal(!showModal);
+  const handleSignUpModal = (e) => {
+    dispatch(openModal('signup'))
+  }
+
+  const handleSignInModal = (e) => {
+    dispatch(openModal('login'))
   }
 
   let dropdown;
@@ -47,11 +51,10 @@ function ProfileButton() {
       <>
         {showMenu && (
           <div className="profile-dropdown">
-            {/* <LoginFormModal /> */}
-            <button className="signup-button">
+            <button className="session-button" onClick={handleSignUpModal}>
               Sign Up
             </button>
-            <button className="signup-button" onClick={handleModal}>
+            <button className="session-button" onClick={handleSignInModal}>
               Log in
             </button>
           </div>

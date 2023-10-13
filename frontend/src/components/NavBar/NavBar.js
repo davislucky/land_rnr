@@ -5,7 +5,7 @@ import SearchRoundedIcon from '@mui/icons-material/SearchRounded';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import LoginForm from "../LoginFormPage/LoginForm";
+// import LoginForm from "../LoginFormPage/LoginForm";
 import ProfileButton from "./ProfileButton/ProfileButton";
 
 
@@ -32,7 +32,7 @@ const NavBar = () => {
                 </div>
                 <div className="profile-button" >
                     <ProfileButton />
-                    {/* <LoginForm /> */}
+                   
                 </div>
             </div>
         </div>

@@ -4,7 +4,7 @@ import Modal from "./components/modal/modal";
 function App() {
   return (
     <>
-      {/* <Modal /> */}
+      <Modal />
       <NavBar />
     </>
   );
