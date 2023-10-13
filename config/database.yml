@@ -81,4 +81,6 @@ test:
 #
 production:
   <<: *default
-  url: <%= ENV['DATABASE_URL'] %>
+  database: air_bnb_clone_production
+  username: air_bnb_clone
+  password: <%= ENV["AIR_BNB_CLONE_DATABASE_PASSWORD"] %>
