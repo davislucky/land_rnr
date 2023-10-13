@@ -44,14 +44,14 @@ export const login = ({email, password}) => async (dispatch) => {
 
 export const signup = (user) => async (dispatch) => {
     debugger
-    const { email, password, first_name, last_name } = user;
+    const { email, password, firstName, lastName } = user;
     const res = await csrfFetch('/api/users', {
         method: "POST",
         body: JSON.stringify({ 
             email, 
             password,
-            first_name,
-            last_name
+            "first_name": firstName,
+            "last_name": lastName
         })
     });
 
@@ -60,6 +60,8 @@ export const signup = (user) => async (dispatch) => {
     dispatch(setCurrentUser(data.user));
     return res;
 }
+
+
 
 export const logout = () => async (dispatch) => {
     const res = await csrfFetch('/api/session', {

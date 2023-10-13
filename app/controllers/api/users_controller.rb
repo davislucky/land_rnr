@@ -4,7 +4,7 @@ class Api::UsersController < ApplicationController
 
   def create
     
-    @user = User.new(user_params)
+    @user = User.new(user_params.deep_transform_keys! { |key| key.underscore })
 
     if @user.save
       login!(@user)

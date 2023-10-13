@@ -9,8 +9,8 @@ function SignupForm() {
     // const currentUser = useSelector( (state) => state.session.user);
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    const [first_name, setFirstName] = useState("");
-    const [last_name, setLastName] = useState("");
+    const [firstName, setFirstName] = useState("");
+    const [lastName, setLastName] = useState("");
     const [errors, setErrors] = useState([]);
 
     const handleSubmit = (e) => {
@@ -19,8 +19,8 @@ function SignupForm() {
         return dispatch(sessionActions.signup({
              email, 
              password,
-             first_name,
-             last_name
+             firstName,
+             lastName
             })).catch(
           async (res) => {
             let data;
@@ -55,7 +55,7 @@ function SignupForm() {
                 <label className="first-name-label">First name</label>
                 <input 
                     type='text'
-                    value={first_name}
+                    value={firstName}
                     onChange={(e) => setFirstName(e.target.value)}
                     required
                 />
@@ -64,7 +64,7 @@ function SignupForm() {
                 <label className="last-name-label">Last name</label>
                 <input 
                     type='text'
-                    value={last_name}
+                    value={lastName}
                     onChange={(e) => setLastName(e.target.value)}
                     required
                 />
