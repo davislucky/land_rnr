@@ -2,6 +2,7 @@ import React from 'react';
 import * as sessionActions from '../../store/session';
 import { useDispatch, useSelector } from 'react-redux';
 import { useState } from 'react';
+import { closeModal } from '../../store/modal';
 
 function LoginForm() {
     const dispatch = useDispatch();
@@ -32,6 +33,7 @@ function LoginForm() {
         e.preventDefault();
         setEmail("demo@user.io");
         setPassword("password");
+        dispatch(closeModal())
         return dispatch(sessionActions.login({email: "demo@user.io", password: "password"}));
     }
 
