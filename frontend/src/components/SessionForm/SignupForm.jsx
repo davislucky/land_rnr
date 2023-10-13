@@ -17,7 +17,7 @@ function SignupForm() {
     const handleSubmit = (e) => {
         e.preventDefault();
         setErrors([]);
-        return dispatch(sessionActions.login({
+        return dispatch(sessionActions.signup({
              email, 
              password,
              firstName,
@@ -123,7 +123,7 @@ function SignupForm() {
             </div>
             <div className="line-separator" />
             <div>
-                <button className="login-button" type="submit">Log in</button>
+                <button className="login-button" type="submit">Sign up</button>
             </div>
             <div>
                 <button className="demo-button" onClick={handleDemo}>Log in with demo user</button>

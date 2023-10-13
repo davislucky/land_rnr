@@ -13,7 +13,7 @@
 #  updated_at      :datetime         not null
 #
 class User < ApplicationRecord
-    validates :first_name, :last_name, :birth_date, :password_digest, presence: true
+    validates :first_name, :last_name, :password_digest, presence: true
     validates :session_token, presence: true, uniqueness: true
     validates :password, length: { minimum: 6 }, allow_nil: true
     validates :email, format: { with: URI::MailTo::EMAIL_REGEXP }, presence: true, uniqueness: true
