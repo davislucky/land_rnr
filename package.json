@@ -1,0 +1,26 @@
+{
+  "name": "air_bnb_clone",
+  "version": "1.0.0",
+  "description": "This README would normally document whatever steps are necessary to get the application up and running.",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "build": "npm install --prefix frontend && npm run build --prefix frontend"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davislucky/land_rnr.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/davislucky/land_rnr/issues"
+  },
+  "homepage": "https://github.com/davislucky/land_rnr#readme",
+  "engines": {
+    "node": "16.20.0"
+  }
+}
