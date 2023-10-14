@@ -10,6 +10,12 @@
     background: none;
 }
 
+.profile-button {
+    border-radius: 30px;
+    border: 0.2px solid var(--grey);
+    background: none;
+}
+
 .menu-rounded-icon {
     color: #222222
 }
