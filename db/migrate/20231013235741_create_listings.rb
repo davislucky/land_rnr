@@ -13,8 +13,10 @@ class CreateListings < ActiveRecord::Migration[7.0]
       t.string :location
       t.boolean :heating, default: true
       t.boolean :ac, default: true
-      t.references :host_id, index: true, foreign_key: { to_table: :users }
+      t.bigint :host_id, null: false
       t.timestamps
     end
+    add_index :listings, :host_id
+    add_foreign_key :listings, :users, column: :host_id
   end
 end
