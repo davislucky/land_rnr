@@ -44,6 +44,40 @@ ApplicationRecord.transaction do
         first_name: 'Mitchell',
         last_name: 'Chan'
     )
-    puts "Done!"
 
+    puts "Creating listings..."
+
+    Listing.create!(
+        price: 50,
+        host_id: 1,
+        num_beds: 2,
+        num_guests: 2
+    )
+
+    Listing.create!(
+        price: 50,
+        host_id: 1,
+        num_beds: 2,
+        num_guests: 2
+    )
+     Listing.create!(
+        price: 50,
+        host_id: 1,
+        num_beds: 2,
+        num_guests: 2
+    )
+    Listing.create!(
+        price: 50,
+        host_id: 1,
+        num_beds: 2,
+        num_guests: 2
+    )
+    Listing.create!(
+        price: 50,
+        host_id: 1,
+        num_beds: 2,
+        num_guests: 2
+    )
+
+    puts "Done!"
 end

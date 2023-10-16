@@ -20,12 +20,12 @@
 #  updated_at  :datetime         not null
 #
 class Listing < ApplicationRecord
-    LISTING_TYPE: ["cabin", "mansion", "apartment", "house", "private room"]
+    LISTING_TYPE = ["cabin", "mansion", "apartment", "house", "private room"]
 
-    validates :type, inclusion: { in: LISTING_TYPE}
+    # validates :type, inclusion: { in: LISTING_TYPE}
     validates :num_guests, :num_beds, :price, numericality: { greater_than: 0 }
     validates :heating, :ac, :parking, inclusion: { in: [true, false] }
-    validates :host_id, uniqueness: true
+    # validates :host_id, uniqueness: true
 
     belongs_to :host,
         class_name: :User,
