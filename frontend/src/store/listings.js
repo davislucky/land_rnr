@@ -51,7 +51,7 @@ const listingReducer = (state = {}, action) => {
             nextState[action.listing.id] = action.listing;
             return nextState;
         case RECEIVE_LISTINGS:
-            return {...action.listings }
+            return { ...action.listings }
         default:
             return state;
     }

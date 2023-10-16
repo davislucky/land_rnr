@@ -1,7 +1,7 @@
 class Api::ListingsController < ApplicationController
   def index
     @listings = Listing.all
-    render: index
+    render :index
   end
 
   def show
@@ -11,5 +11,7 @@ class Api::ListingsController < ApplicationController
       render :show
     else
       render json: { errors: ["Sorry. There were not listings matching those criteria"] }, status: :unprocessable_entity
+    end
   end
+
 end

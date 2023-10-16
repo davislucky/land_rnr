@@ -1,21 +1,21 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getListings, fetchListings } from "../../store/listings";
+import ListingIndexItem from "./listingIndexItem/listingIndexItem";
+import './listingIndex.css'
 
-function ListingsIndex (props) {
+function ListingsIndex () {
     const dispatch = useDispatch();
     const listings = useSelector(getListings);
     
     useEffect(() => {
-        dispatch(fetchListings())
+        dispatch(fetchListings(listings))
     }, []);
 
     return (
         <div className="index-container">
             {
-                listings.map( (listing) => {
-                    listing.price
-                })
+                listings.map( (listing) => <ListingIndexItem key={listing.id} listing={listing}/>)
             }
         </div>
     )

@@ -6,6 +6,7 @@
     position: sticky;
     top: 0;
     border-bottom: 0.5px solid var(--grey);
+    background-color: white;
 }
 
 .navbar-logo {

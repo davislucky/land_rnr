@@ -8,6 +8,7 @@
 
 ApplicationRecord.transaction do
     puts "Destroying tables..."
+    Listing.destroy_all
     User.destroy_all
 
     puts "Resetting primary keys..."
@@ -48,6 +49,7 @@ ApplicationRecord.transaction do
     puts "Creating listings..."
 
     Listing.create!(
+        title: "Tiburon, California",
         price: 50,
         host_id: 1,
         num_beds: 2,
@@ -55,24 +57,28 @@ ApplicationRecord.transaction do
     )
 
     Listing.create!(
+        title: "Tiburon, California",
         price: 50,
         host_id: 1,
         num_beds: 2,
         num_guests: 2
     )
      Listing.create!(
+        title: "Tiburon, California",
         price: 50,
         host_id: 1,
         num_beds: 2,
         num_guests: 2
     )
     Listing.create!(
+        title: "Tiburon, California",
         price: 50,
         host_id: 1,
         num_beds: 2,
         num_guests: 2
     )
     Listing.create!(
+        title: "Tiburon, California",
         price: 50,
         host_id: 1,
         num_beds: 2,
