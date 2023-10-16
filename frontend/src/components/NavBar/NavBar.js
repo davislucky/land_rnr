@@ -7,6 +7,7 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
 // import LoginForm from "../LoginFormPage/LoginForm";
 import ProfileButton from "./ProfileButton/ProfileButton";
+import { Link } from "react-router-dom";
 
 
 
@@ -14,7 +15,9 @@ const NavBar = () => {
 
     return (
         <div className="navbar">
-            <img src={logo} alt='logo' className="navbar-logo"></img>
+            <Link to="/">
+                <img src={logo} alt='logo' className="navbar-logo"></img>
+            </Link>
             <div className="search-bar">
                 <div className="search-bar-text">Any where</div>
                 <div className="search-bar-text">Any week</div>

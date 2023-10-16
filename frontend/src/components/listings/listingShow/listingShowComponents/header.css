@@ -1,0 +1,26 @@
+.header-container {
+    display: flex;
+    flex-direction: row;
+}
+.images-container {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.sub-image {
+    height: 150px;
+    width: 150px;
+}
+
+.main-image {
+    height: 320px;
+    width: 300px
+}
+
+.sub-images-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}

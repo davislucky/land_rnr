@@ -49,7 +49,8 @@ ApplicationRecord.transaction do
     puts "Creating listings..."
 
     Listing.create!(
-        title: "Tiburon, California",
+        title: "Beach House with amazing view",
+        location: "Tiburon, California",
         price: 50,
         host_id: 1,
         num_beds: 2,
@@ -57,28 +58,32 @@ ApplicationRecord.transaction do
     )
 
     Listing.create!(
-        title: "Tiburon, California",
+        title: "Beach House with not amazing view",
+        location: "Riverside, California",
         price: 50,
         host_id: 1,
         num_beds: 2,
         num_guests: 2
     )
      Listing.create!(
-        title: "Tiburon, California",
+        title: "Not a house",
+        location: "Los Angeles, California",
         price: 50,
         host_id: 1,
         num_beds: 2,
         num_guests: 2
     )
     Listing.create!(
-        title: "Tiburon, California",
+        title: "This is a 'seedy' place",
+        location: "Ontario, California",
         price: 50,
         host_id: 1,
         num_beds: 2,
         num_guests: 2
     )
     Listing.create!(
-        title: "Tiburon, California",
+        title: "Call me a tree with all these seeds",
+        location: "San Francisco, California",
         price: 50,
         host_id: 1,
         num_beds: 2,
