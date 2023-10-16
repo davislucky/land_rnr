@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import { getListing, fetchListing } from "../../../store/listings";
 import ListingHeader from "./listingShowComponents/header";
 import './listingShow.css'
+import ListingShowInfo from "./listingShowComponents/info";
 
 
 

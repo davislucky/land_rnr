@@ -49,6 +49,7 @@ ApplicationRecord.transaction do
     puts "Creating listings..."
 
     Listing.create!(
+        description: "In the heart of downtown San Francisco, La Monarca is a Kasa original within walking distance of Union Square, Market Street, and Chinatown. Built in 1915, this historic property in the Nob Hill neighborhood is surrounded by Victorian architecture and upscale dining. Experience the City by the Bay the right way!",
         title: "Beach House with amazing view",
         location: "Tiburon, California",
         price: 50,
@@ -66,6 +67,7 @@ ApplicationRecord.transaction do
         num_guests: 2
     )
      Listing.create!(
+        description: "In the heart of downtown San Francisco, La Monarca is a Kasa original within walking distance of Union Square, Market Street, and Chinatown. Built in 1915, this historic property in the Nob Hill neighborhood is surrounded by Victorian architecture and upscale dining. Experience the City by the Bay the right way!",
         title: "Not a house",
         location: "Los Angeles, California",
         price: 50,
@@ -74,6 +76,7 @@ ApplicationRecord.transaction do
         num_guests: 2
     )
     Listing.create!(
+        description: "In the heart of downtown San Francisco, La Monarca is a Kasa original within walking distance of Union Square, Market Street, and Chinatown. Built in 1915, this historic property in the Nob Hill neighborhood is surrounded by Victorian architecture and upscale dining. Experience the City by the Bay the right way!",
         title: "This is a 'seedy' place",
         location: "Ontario, California",
         price: 50,
@@ -82,6 +85,7 @@ ApplicationRecord.transaction do
         num_guests: 2
     )
     Listing.create!(
+        description: "In the heart of downtown San Francisco, La Monarca is a Kasa original within walking distance of Union Square, Market Street, and Chinatown. Built in 1915, this historic property in the Nob Hill neighborhood is surrounded by Victorian architecture and upscale dining. Experience the City by the Bay the right way!",
         title: "Call me a tree with all these seeds",
         location: "San Francisco, California",
         price: 50,
