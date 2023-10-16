@@ -12,8 +12,8 @@ function ListingIndexItem ({listing}) {
                 <div className="top-card-info">
                     <p className="card-title">{listing.title}</p>
                     <div className="card-rating">
-                        <StarIcon />
-                        <p>3.5</p>
+                        <StarIcon className="star-icon"/>
+                        <p className="rating-number">3.5</p>
                     </div>
                 </div>
                 <div className="middle-card-info">
@@ -21,7 +21,7 @@ function ListingIndexItem ({listing}) {
                     <p className="dates-available">Dec 15 - 20</p>
                 </div>
                 <div className="bottom-card-info">
-                    <p className="card-price">{listing.price}</p>
+                    <p className="card-price">${listing.price}</p>
                 </div>
             </Link>
         </>
