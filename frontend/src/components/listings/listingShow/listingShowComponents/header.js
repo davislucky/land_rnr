@@ -12,22 +12,22 @@ function ListingHeader( {listing} ) {
     return (
         <div className="header-container">
             <div className="header-info">
-                <p>{listing.title}</p>
+                <h1 className="heading-title">{listing.title}</h1>
                 <div className="header-links">
                     <div className="header-review-info">
-                        <StarIcon />
-                        <p>4.78</p>
-                        <p>42 reviews</p>
+                        <StarIcon className="review-icon"/>
+                        <p className="review-average">4.78</p>
+                        <p className="review-number">42 reviews</p>
                         <p>{listing.location}</p>
                     </div>
                     <div className="share-save-buttons">
                         <div className="share-link">
-                            <IosShareIcon />
-                            <p>Share</p>
+                            <IosShareIcon className="share-icon"/>
+                            <p className="share-text">Share</p>
                         </div>
                         <div className="favorite-link">
-                            <FavoriteBorderIcon />
-                            <p>Save</p>
+                            <FavoriteBorderIcon className="save-icon"/>
+                            <p className="save-text">Save</p>
                         </div>
                     </div>
                 </div>

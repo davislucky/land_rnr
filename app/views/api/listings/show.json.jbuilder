@@ -1,1 +1,1 @@
-json.extract! @listing, :id, :title, :price
+json.extract! @listing, :id, :title, :price, :location

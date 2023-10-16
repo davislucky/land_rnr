@@ -1,0 +1,7 @@
+.show-page {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin-left: 220px;
+    margin-right: 220px;
+}

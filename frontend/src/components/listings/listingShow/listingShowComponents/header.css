@@ -1,26 +1,84 @@
 .header-container {
     display: flex;
+    flex-direction: column;
+}
+
+.heading-title {
+
+}
+
+.review-number {
+    padding-right: 1rem;
+}
+
+.review-average {
+    padding-right: 1rem;
+}
+
+.review-icon {
+    padding-top: 11px;
+}
+
+.header-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.header-review-info {
+    display: flex;
     flex-direction: row;
 }
+
+.share-save-buttons {
+    display: flex;
+    flex-direction: row;
+}
+
+.share-link {
+    display: flex;
+    flex-direction: row;
+    padding-right: 1rem;
+}
+
+.share-icon {
+    padding-top: 11px
+}
+
+.save-icon {
+    padding-top: 11px;
+}
+
+.favorite-link {
+    display: flex;
+    flex-direction: row;
+}
+
 .images-container {
     display: flex;
     flex-direction: row;
-
+    border-radius: 60%;
 }
 
 .sub-image {
-    height: 150px;
-    width: 150px;
+    height: 152px;
+    width: 200px;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
 }
+
+
 
 .main-image {
     height: 320px;
-    width: 300px
+    width: 560px;
+    padding-right: 1rem;
 }
 
 .sub-images-container {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    max-height: 320px;
+    width: 50%;
 }
