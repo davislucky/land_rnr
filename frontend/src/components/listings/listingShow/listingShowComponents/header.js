@@ -41,6 +41,11 @@ function ListingHeader( {listing} ) {
                     <img className="sub-image" src={sampleImg}/>
                 </div>
             </div>
+            <div className="hosting-info">
+                <p className="host-name">Hosted by host.name</p>
+                <p className="num-guests">{listing.numGuests} guests</p>
+                <p className="num-beds">{listing.numBeds} beds</p>
+            </div>
         </div>
     )
 }

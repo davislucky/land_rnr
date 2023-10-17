@@ -8,6 +8,7 @@ import ListingShowInfo from "./listingShowComponents/info";
 
 
 
+
 function ListingShowPage() {
     const dispatch = useDispatch();
     const { listingId } = useParams();
@@ -21,9 +22,13 @@ function ListingShowPage() {
         <>
             <div className="show-page">
                 <ListingHeader listing={listing}/>
+                <div className="split-middle-components">
+                    <ListingShowInfo listing={listing}/>
+                </div>
             </div>
         </>
     ) : null;
 }
 
 export default ListingShowPage;
+

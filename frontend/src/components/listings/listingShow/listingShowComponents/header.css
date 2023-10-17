@@ -3,6 +3,20 @@
     flex-direction: column;
 }
 
+.hosting-info {
+    display: flex;
+    flex-direction: row;
+}
+
+.host-name {
+    padding-right: 1rem;
+}
+
+.num-guests {
+    padding-right: 1rem;
+}
+
+
 .heading-title {
 
 }
