@@ -3,6 +3,7 @@ import Modal from "./components/modal/modal";
 import ListingsIndex from "./components/listings/listingIndex";
 import { Route, Switch } from "react-router-dom";
 import ListingShowPage from "./components/listings/listingShow/listingShow";
+import UserShow from "./components/userShow";
 
 function App() {
   return (
@@ -15,6 +16,9 @@ function App() {
         </Route>
         <Route exact path ="/listings/:listingId">
           <ListingShowPage />
+        </Route>
+        <Route exact path ="/user">
+        <UserShow />
         </Route>
       </Switch>
     </>

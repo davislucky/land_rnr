@@ -6,6 +6,7 @@ import './ProfileDropdown.css'
 import { useDispatch, useSelector } from "react-redux";
 import * as sessionActions from '../../../store/session';
 import { openModal } from "../../../store/modal";
+import { Link } from "react-router-dom";
 
 
 function ProfileButton() {
@@ -66,7 +67,9 @@ function ProfileButton() {
       <>
         {showMenu && (
           <div className="profile-dropdown">
-            <button className="signup-button">Trips</button>
+            <Link to={`/user`}>
+              <button className="signup-button">Trips</button>
+            </Link>
             <button className="signup-button">Messages</button>
             <div className="dropdown-line"/>
             <button onClick={logout}>Log out</button>
