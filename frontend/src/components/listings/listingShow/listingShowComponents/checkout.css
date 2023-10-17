@@ -1,22 +1,8 @@
-.show-page {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    margin-left: 220px;
-    margin-right: 220px;
-}
-
-.split-middle-components {
-    display: flex;
-    flex-direction: row;
-}
-
-.checkout-box {
+/* .checkout-box {
     display: flex;
     position: sticky;
     top: 6rem;
     align-items: flex-start;
-    flex-direction: column;
     height: 500px;
     flex: auto;
     margin-top: 2rem;
@@ -24,5 +10,9 @@
     border: 1px solid var(--grey);
     border-radius: 15px;
     box-shadow: rgba(0, 0, 0, 0.12) 0px 6px 16px;
-    width: 100%
+} */
+
+.checkout-header {
+    display: flex;
+    justify-content: space-between;
 }

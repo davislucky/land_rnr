@@ -1,15 +1,23 @@
 import React from "react";
+import StarIcon from '@mui/icons-material/Star';
+import './checkout.css';
+import DatePicker from "./datePicker";
+
 
 function Checkout ({listing}) {
     
     return (
         <div className="checkout-box">
-            <form>
-                <input type="date" className="start-date">Start Date</input>
-                <input type="date" className="end-date">End Date</input>
-                <button>Reserve</button>
-            </form>
-            
+            <div className="checkout-header">
+                <p>${listing.price} night</p>
+                <div className="header-review-info">
+                    <StarIcon className="review-icon"/>
+                    <p className="review-average">4.78</p>
+                    <p className="review-number">42 reviews</p>
+                </div>
+            </div>
+            <DatePicker />
+            <button>Reserve</button>
         </div>
     )
 }

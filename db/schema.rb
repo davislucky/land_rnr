@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_10_13_235741) do
+ActiveRecord::Schema[7.0].define(version: 2023_10_17_144614) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -33,6 +33,34 @@ ActiveRecord::Schema[7.0].define(version: 2023_10_13_235741) do
     t.index ["host_id"], name: "index_listings_on_host_id"
   end
 
+  create_table "reservations", force: :cascade do |t|
+    t.bigint "guest_id", null: false
+    t.integer "num_guests", null: false
+    t.date "check_in", null: false
+    t.date "check_out", null: false
+    t.bigint "listing_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["guest_id"], name: "index_reservations_on_guest_id"
+    t.index ["listing_id"], name: "index_reservations_on_listing_id"
+  end
+
+  create_table "reviews", force: :cascade do |t|
+    t.bigint "author_id", null: false
+    t.bigint "listing_id", null: false
+    t.integer "location", null: false
+    t.integer "cleanliness", null: false
+    t.integer "accuracy", null: false
+    t.integer "value", null: false
+    t.integer "check_in", null: false
+    t.integer "communication", null: false
+    t.text "blurb", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["author_id"], name: "index_reviews_on_author_id"
+    t.index ["listing_id"], name: "index_reviews_on_listing_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "first_name", null: false
     t.string "last_name", null: false
@@ -46,4 +74,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_10_13_235741) do
   end
 
   add_foreign_key "listings", "users", column: "host_id"
+  add_foreign_key "reservations", "listings"
+  add_foreign_key "reservations", "users", column: "guest_id"
+  add_foreign_key "reviews", "listings"
+  add_foreign_key "reviews", "users", column: "author_id"
 end

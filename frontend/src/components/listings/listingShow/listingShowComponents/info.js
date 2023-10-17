@@ -15,12 +15,9 @@ function ListingShowInfo ( {listing} ) {
                         Object.keys(listing).map(amenity => <p>{amenity}</p>)
                     }
                 </div>
-                <div className="date-picker">
+                {/* <div className="date-picker">
                     <DatePicker />  
-                </div>
-                <div className="checkout-container">
-                    
-                </div>
+                </div> */}
             </div>
         </div>
     )

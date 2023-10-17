@@ -5,6 +5,8 @@ import { getListing, fetchListing } from "../../../store/listings";
 import ListingHeader from "./listingShowComponents/header";
 import './listingShow.css'
 import ListingShowInfo from "./listingShowComponents/info";
+import Checkout from "./listingShowComponents/checkout";
+import Reviews from "./listingShowComponents/reviews";
 
 
 
@@ -24,7 +26,10 @@ function ListingShowPage() {
                 <ListingHeader listing={listing}/>
                 <div className="split-middle-components">
                     <ListingShowInfo listing={listing}/>
+                    <Checkout className="checkout-box" listing={listing}/>
                 </div>
+                <Reviews className="review-box" listing={listing} />
+
             </div>
         </>
     ) : null;
