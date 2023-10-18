@@ -3,7 +3,7 @@ async function csrfFetch(url, options = {}) {
     options.method = options.method || "GET";
     // set options.headers to an empty object if there is no headers
     options.headers = options.headers || {};
-  
+    // debugger
     // if the options.method is not 'GET', then set the "Content-Type" header to
     // "application/json" and set the "X-CSRF-Token" header to the value of
     // "X-CSRF-TOKEN" in `sessionStorage`

@@ -38,8 +38,12 @@
     flex-direction: row;
 }
 
-.rating-number {
-    
+.card {
+    text-decoration: none;
+}
+
+.card-title {
+    color: black;
 }
 
 .star-icon {

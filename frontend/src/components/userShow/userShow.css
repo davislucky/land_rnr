@@ -2,3 +2,10 @@
     display: flex;
     flex-direction: column;
 }
+
+.reservations-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+

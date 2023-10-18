@@ -32,18 +32,23 @@ function EditReservation ({reservation}) {
 
     return (reservation) ? (
         <div className="edit-res-container">
-            <h3>Your reservation on {reservation.checkIn}</h3>
-            <label> Number of guests
-                <input type="number" className="num-guests-editor" value={updatedRes.num_guests} onChange={handleChange('num_guests')}/>
-            </label>
-            <label> Check-in
-                <input type="date" className="checkin-editor" value={updatedRes.check_in} onChange={handleChange('check_in')}/>
-            </label>
-            <label> Check-out
-                <input type="date" className="checkout-editor" value={updatedRes.check_out} onChange={handleChange('check_out')}/>
-            </label>
-            <button onClick={handleEdit}>Edit reservation</button>
-            <button onClick={handleDelete}>Cancel reservation</button>
+            <div className="edit-box">
+                <h3>Your reservation on {reservation.checkIn}</h3>
+                <label> Number of guests
+                    <input type="number" className="num-guests-editor" value={updatedRes.num_guests} onChange={handleChange('num_guests')}/>
+                </label>
+                <div className="checkin-box">
+                    <label className="checkin-label"> Check-in 
+                        <input type="date" className="checkin-editor" value={updatedRes.check_in} onChange={handleChange('check_in')}/>
+                    </label>
+                </div>
+                <label className="checkout-label"> Check-out
+                    <input type="date" className="checkout-editor" value={updatedRes.check_out} onChange={handleChange('check_out')}/>
+                </label>
+                <button onClick={handleEdit}>Edit reservation</button>
+                <button onClick={handleDelete}>Cancel reservation</button>
+                <div className="separator-line"></div>
+            </div>
         </div>
     ) : null
 }

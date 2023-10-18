@@ -10,7 +10,7 @@ function ListingIndexItem ({listing}) {
             <Link to={`/listings/${listing.id}`} className="card">
                 <img className="card-img" src={sampleImg}/>
                 <div className="top-card-info">
-                    <p className="card-title">{listing.title}</p>
+                    <p className="card-title">{listing.location}</p>
                     <div className="card-rating">
                         <StarIcon className="star-icon"/>
                         <p className="rating-number">3.5</p>

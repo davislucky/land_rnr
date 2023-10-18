@@ -1,5 +1,25 @@
 .edit-res-container {
     display: flex;
     flex-direction: column;
-    width:fit-content
+    width: fit-content
+}
+
+.edit-box {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    padding-bottom: 1rem;
+
+}
+
+.checkin-box {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.separator-line {
+    height: 1px;
+    background-color: grey;
+    width: 100%;
 }

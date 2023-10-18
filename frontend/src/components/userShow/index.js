@@ -12,12 +12,11 @@ function UserShow( ) {
     const reservations = useSelector(state => state.reservations);
     const dispatch = useDispatch();
 
-    useEffect(() => {
-        // console.log(reservations)    
+    useEffect(() => {   
         if (!Object.values(reservations).length) {
             dispatch(restoreSession())
         }
-    }, [])
+    }, [reservations])
     return reservations ? (
         <div className="reservations-show-container">
             <h1>Your reservations:</h1>
@@ -28,7 +27,11 @@ function UserShow( ) {
                }
             </ul>
         </div>
-    ) : null;
+    ) : (
+        <div>
+            <h1>You have no reservations </h1>
+        </div>
+    );
 }
 
 export default UserShow;
