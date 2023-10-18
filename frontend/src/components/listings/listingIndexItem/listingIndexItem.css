@@ -31,11 +31,25 @@
 
 .card-price {
     height: 1rem;
+    color: black;
+    font-weight: bold;
 }
 
 .card-rating {
     display: flex;
     flex-direction: row;
+}
+
+.rating-number {
+    color: black;
+}
+
+.filter-info {
+    color: var(--font-grey)
+}
+
+.dates-available {
+    color: var(--font-grey)
 }
 
 .card {
@@ -44,9 +58,12 @@
 
 .card-title {
     color: black;
+    font-weight: bold;
 }
 
 .star-icon {
     padding-top: 15px;
     color: black;
+    width: 0.75em;
+    height: 0.75em;
 }

@@ -8,6 +8,7 @@
 
 ApplicationRecord.transaction do
     puts "Destroying tables..."
+    Reservation.destroy_all
     Listing.destroy_all
     User.destroy_all
 

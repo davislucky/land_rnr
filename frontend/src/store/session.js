@@ -39,7 +39,9 @@ export const login = ({email, password}) => async (dispatch) => {
     });
 
     const data = await res.json();
-    dispatch(receiveReservations(data.reservations));
+    if (data.reservations) {
+        dispatch(receiveReservations(data.reservations));
+    }
     dispatch(setCurrentUser(data.user));
     return res;
 }
@@ -79,7 +81,9 @@ export const restoreSession = () => async (dispatch) => {
     const data = await res.json();
     storeCurrentUser(data.user);
     if (data.user) {
-        dispatch(receiveReservations(data.reservations));
+        if (data.reservations) {
+            dispatch(receiveReservations(data.reservations));
+        }
     }
     dispatch(setCurrentUser(data.user));
     return res;

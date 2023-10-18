@@ -52,12 +52,14 @@ function ProfileButton() {
       <>
         {showMenu && (
           <div className="profile-dropdown">
-            <button className="session-button" onClick={handleSignUpModal}>
-              Sign Up
-            </button>
-            <button className="session-button" onClick={handleSignInModal}>
-              Log in
-            </button>
+            <div className="dropdown-content">
+              <button className="session-button" onClick={handleSignUpModal}>
+                Sign Up
+              </button>
+              <button className="session-button" onClick={handleSignInModal}>
+                Log in
+              </button>
+            </div>
           </div>
         )}
       </>
@@ -67,12 +69,14 @@ function ProfileButton() {
       <>
         {showMenu && (
           <div className="profile-dropdown">
-            <Link to={`/user`}>
-              <button className="signup-button">Trips</button>
-            </Link>
-            <button className="signup-button">Messages</button>
-            <div className="dropdown-line"/>
-            <button onClick={logout}>Log out</button>
+            <div className="dropdown-content">
+              <Link to={`/user`}>
+                <button className="signup-button">Trips</button>
+              </Link>
+              <button className="signup-button">Messages</button>
+              <div className="dropdown-line"/>
+              <button onClick={logout}>Log out</button>
+            </div>
           </div>
         )}
       </>

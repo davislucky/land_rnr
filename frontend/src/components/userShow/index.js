@@ -9,15 +9,15 @@ import { restoreSession } from "../../store/session";
 
 
 function UserShow( ) {
-    const reservations = useSelector(state => state.reservations);
+    const reservations = useSelector(state => Object.values(state.reservations));
     const dispatch = useDispatch();
 
     useEffect(() => {   
-        if (!Object.values(reservations).length) {
+        if (!(reservations.length)) {
             dispatch(restoreSession())
         }
-    }, [reservations])
-    return reservations ? (
+    }, [])
+    return reservations.length ? (
         <div className="reservations-show-container">
             <h1>Your reservations:</h1>
             <ul className="reservations-list">

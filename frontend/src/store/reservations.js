@@ -81,7 +81,7 @@ export const deleteReservation = (reservationId) => async (dispatch) => {
     });
 
     if (res.ok) {
-        dispatch(removeReservation(res));
+        dispatch(removeReservation(reservationId));
     }
 }
 

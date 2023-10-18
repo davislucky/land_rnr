@@ -18,7 +18,7 @@ function ListingIndexItem ({listing}) {
                 </div>
                 <div className="middle-card-info">
                     <p className="filter-info">Mountain and Ocean Views</p>
-                    <p className="card-price">${listing.price}</p>
+                    <p className="card-price">${listing.price} night</p>
                 </div>
                 <div className="bottom-card-info">
                     <p className="dates-available">Dec 15 - 20</p>
