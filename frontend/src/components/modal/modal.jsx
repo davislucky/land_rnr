@@ -6,6 +6,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import './modal.css'
 import CloseIcon from '@mui/icons-material/Close';
 
+
 function Modal() {
     const dispatch = useDispatch();
     const modal = useSelector( state => state.ui.modal );

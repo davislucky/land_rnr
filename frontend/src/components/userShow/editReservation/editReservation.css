@@ -1,4 +1,5 @@
-.reservations-show-container {
+.edit-res-container {
     display: flex;
     flex-direction: column;
+    width:fit-content
 }

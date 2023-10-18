@@ -9,7 +9,7 @@ class Api::ReservationsController < ApplicationController
             render json: { errors: @reservation.errors.full_messages }, status: 422
         end
     end
-    
+
     def create
         @reservation = Reservation.new(reservation_params)
 
@@ -20,8 +20,18 @@ class Api::ReservationsController < ApplicationController
         end
     end
 
+    def update
+        @reservation = Reservation.find_by(id: params[:id])
+        
+        if @reservation.update(reservation_params)
+            render :show
+        else 
+            render json: { errors: @reservation.errors.full_messages }, status: 422
+        end
+    end
+
     def destroy
-        @reservation = Reservtion.find_by(id: params[:id])
+        @reservation = Reservation.find_by(id: params[:id])
 
         if @reservation
             @reservation.delete
@@ -34,6 +44,6 @@ class Api::ReservationsController < ApplicationController
     private
 
     def reservation_params
-        params.require(:reservation).permit(:guest_id, :listing_id, :num_guests, :check_in, :check_out)
+        params.require(:reservation).permit(:id, :guest_id, :listing_id, :num_guests, :check_in, :check_out)
     end
 end

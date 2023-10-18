@@ -18,7 +18,7 @@ function App() {
           <ListingShowPage />
         </Route>
         <Route exact path ="/user">
-        <UserShow />
+          <UserShow />
         </Route>
       </Switch>
     </>

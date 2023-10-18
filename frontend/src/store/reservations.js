@@ -92,6 +92,8 @@ const reservationsReducer = (state = {}, action) => {
         case RECEIVE_RESERVATION:
             nextState[action.reservation.id] = action.reservation;
             return nextState;
+        case RECEIVE_RESERVATIONS:
+            return action.reservations
         case REMOVE_RESERVATION:
             delete nextState[action.reservationId];
             return nextState;

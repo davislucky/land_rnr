@@ -1,4 +1,5 @@
 import csrfFetch from "./csrf";
+import { receiveReservations } from "./reservations";
 
 export const SET_CURRENT_USER = 'session/SET_CURRENT_USER';
 export const REMOVE_CURRENT_USER = 'session/SET_CURRENT_USER';
@@ -38,6 +39,7 @@ export const login = ({email, password}) => async (dispatch) => {
     });
 
     const data = await res.json();
+    dispatch(receiveReservations(data.reservations));
     dispatch(setCurrentUser(data.user));
     return res;
 }
@@ -75,7 +77,11 @@ export const restoreSession = () => async (dispatch) => {
     const res = await csrfFetch('/api/session');
     storeCSRFToken(res);
     const data = await res.json();
+    debugger
     storeCurrentUser(data.user);
+    if (data.user) {
+        dispatch(receiveReservations(data.reservations));
+    }
     dispatch(setCurrentUser(data.user));
     return res;
 }

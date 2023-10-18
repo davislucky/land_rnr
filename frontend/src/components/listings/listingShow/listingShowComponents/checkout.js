@@ -13,9 +13,10 @@ function Checkout ({listing}) {
     const [numGuests, setNumGuests] = useState(0);
     const [checkIn, setCheckIn] = useState('');
     const [checkOut, setCheckOut] = useState('');
+    
     const reservation = {
         listing_id: listing.id,
-        guest_id: currentUser.id,
+        guest_id: listing.guestId,
         num_guests: numGuests,
         check_in: checkIn,
         check_out: checkOut
