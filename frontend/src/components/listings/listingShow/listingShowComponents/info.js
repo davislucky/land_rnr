@@ -12,7 +12,7 @@ function ListingShowInfo ( {listing} ) {
             <div className="info-container">
                 <div className="amenities">
                     {
-                        Object.keys(listing).map(amenity => <p>{amenity}</p>)
+                        Object.keys(listing).map((amenity, idx) => <p key={idx}>{amenity}</p>)
                     }
                 </div>
                 {/* <div className="date-picker">
