@@ -15,10 +15,14 @@ function Checkout ({listing}) {
     
     const reservation = {
         listing_id: listing.id,
-        guest_id: currentUser.id,
+        guest_id: null,
         num_guests: numGuests,
         check_in: checkIn,
         check_out: checkOut
+    }
+
+    if (currentUser) {
+        reservation.guest_id = currentUser.id
     }
 
     const handleSubmit = (e) => {
