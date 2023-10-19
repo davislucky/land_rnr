@@ -32,4 +32,9 @@ class Listing < ApplicationRecord
         foreign_key: :host_id
 
     has_one_attached :photo
+
+    has_many :reviews,
+        dependent: :destroy,
+        foreign_key: :review_id,
+        class_name: :Review
 end

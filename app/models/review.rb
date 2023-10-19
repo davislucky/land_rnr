@@ -16,4 +16,13 @@
 #  updated_at    :datetime         not null
 #
 class Review < ApplicationRecord
+    validates :cleanliness, :location, :accuracy, :value, :check_in, :blurb, :communication, presence: true
+
+    belongs_to :author,
+        foreign_key: :author_id,
+        class_name: :User
+
+    belongs_to :listing,
+        foreign_key: :listing_id,
+        class_name: :Listing
 end

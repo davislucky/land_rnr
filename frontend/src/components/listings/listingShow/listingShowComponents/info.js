@@ -1,5 +1,5 @@
 import React from "react";
-import DatePicker from "./datePicker";
+// import DatePicker from "./datePicker";
 
 function ListingShowInfo ( {listing} ) {
 
@@ -15,9 +15,6 @@ function ListingShowInfo ( {listing} ) {
                         Object.keys(listing).map((amenity, idx) => <p key={idx}>{amenity}</p>)
                     }
                 </div>
-                {/* <div className="date-picker">
-                    <DatePicker />  
-                </div> */}
             </div>
         </div>
     )

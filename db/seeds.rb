@@ -10,6 +10,7 @@ require "open-uri"
 
 
     puts "Destroying tables..."
+    Review.destroy_all
     Reservation.destroy_all
     Listing.destroy_all
     User.destroy_all
@@ -113,48 +114,22 @@ require "open-uri"
 
     puts "#{listings.length} listings created!"
 
-    # Listing.create!(
-       
-    # )
+    puts "Creating reviews..."
 
-    # Listing.create!(
-    #     description: "In the heart of downtown San Francisco, La Monarca is a Kasa original within walking distance of Union Square, Market Street, and Chinatown. Built in 1915, this historic property in the Nob Hill neighborhood is surrounded by Victorian architecture and upscale dining. Experience the City by the Bay the right way!",
-    #     title: "Beach House with not amazing view",
-    #     location: "Riverside, California",
-    #     price: 50,
-    #     host_id: 1,
-    #     num_beds: 2,
-    #     num_guests: 2
-    # )
-    #  Listing.create!(
-    #     description: "In the heart of downtown San Francisco, La Monarca is a Kasa original within walking distance of Union Square, Market Street, and Chinatown. Built in 1915, this historic property in the Nob Hill neighborhood is surrounded by Victorian architecture and upscale dining. Experience the City by the Bay the right way!",
-    #     title: "Not a house",
-    #     location: "Los Angeles, California",
-    #     price: 50,
-    #     host_id: 1,
-    #     num_beds: 2,
-    #     num_guests: 2,
-    #     photo_url: 'https://land-rnr-seeds.s3.us-west-1.amazonaws.com/land-rnr-seed-photos/seed2.jpeg'
-    # )
-    # Listing.create!(
-    #     description: "In the heart of downtown San Francisco, La Monarca is a Kasa original within walking distance of Union Square, Market Street, and Chinatown. Built in 1915, this historic property in the Nob Hill neighborhood is surrounded by Victorian architecture and upscale dining. Experience the City by the Bay the right way!",
-    #     title: "This is a 'seedy' place",
-    #     location: "Ontario, California",
-    #     price: 50,
-    #     host_id: 1,
-    #     num_beds: 2,
-    #     num_guests: 2,
-    #     photo_url: 'https://land-rnr-seeds.s3.us-west-1.amazonaws.com/land-rnr-seed-photos/seed3.jpeg'
-    # )
-    # Listing.create!(
-    #     description: "In the heart of downtown San Francisco, La Monarca is a Kasa original within walking distance of Union Square, Market Street, and Chinatown. Built in 1915, this historic property in the Nob Hill neighborhood is surrounded by Victorian architecture and upscale dining. Experience the City by the Bay the right way!",
-    #     title: "Call me a tree with all these seeds",
-    #     location: "San Francisco, California",
-    #     price: 50,
-    #     host_id: 1,
-    #     num_beds: 2,
-    #     num_guests: 2,
-    #     photo_url: 'https://land-rnr-seeds.s3.us-west-1.amazonaws.com/land-rnr-seed-photos/seed4.jpeg'
-    # )
+    50.times do
+        Review.create(
+            author_id: Faker::Number.between(from: 1, to: 5),
+            listing_id: Faker::Number.between(from: 1, to: 4), # Assuming home IDs are between 1 and 20
+            cleanliness: Faker::Number.between(from: 1, to: 5),
+            communication: Faker::Number.between(from: 1, to: 5),
+            check_in: Faker::Number.between(from: 1, to: 5),
+            accuracy: Faker::Number.between(from: 1, to: 5),
+            location: Faker::Number.between(from: 1, to: 5),
+            value: Faker::Number.between(from: 1, to: 5),
+            blurb: Faker::Lorem.paragraph,
+            created_at: Faker::Time.between(from: 2.years.ago, to: Time.zone.now),
+            updated_at: Faker::Time.between(from: 2.years.ago, to: Time.zone.now),
+        )
+    end
 
     puts "Done!"
