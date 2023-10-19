@@ -1,8 +1,9 @@
 import React from "react";
 import { Link } from 'react-router-dom';
-import sampleImg from '../../../assets/example_card_image.png';
+// import sampleImg from '../../../assets/example_card_image.png';
 import StarIcon from '@mui/icons-material/Star';
 import './listingIndexItem.css';
+
 
 function ListingIndexItem ({listing}) {
     return (

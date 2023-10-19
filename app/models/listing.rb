@@ -33,8 +33,5 @@ class Listing < ApplicationRecord
 
     has_one_attached :photo
 
-    has_many :reviews,
-        dependent: :destroy,
-        foreign_key: :review_id,
-        class_name: :Review
+    has_many :reviews
 end

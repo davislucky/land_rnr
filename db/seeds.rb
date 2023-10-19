@@ -5,7 +5,7 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
-
+require "faker"
 require "open-uri"
 
 
@@ -116,10 +116,10 @@ require "open-uri"
 
     puts "Creating reviews..."
 
-    50.times do
-        Review.create(
+    50.times do 
+         Review.create(
             author_id: Faker::Number.between(from: 1, to: 5),
-            listing_id: Faker::Number.between(from: 1, to: 4), # Assuming home IDs are between 1 and 20
+            listing_id: Faker::Number.between(from: 1, to: 4), 
             cleanliness: Faker::Number.between(from: 1, to: 5),
             communication: Faker::Number.between(from: 1, to: 5),
             check_in: Faker::Number.between(from: 1, to: 5),

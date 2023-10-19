@@ -1,4 +1,5 @@
 import csrfFetch from "./csrf";
+import { receiveReviews } from "./reviews";
 
 export const RECEIVE_LISTINGS = 'listings/RECEIVE_LISTINGS';
 export const RECEIVE_LISTING = 'listings/RECEIVE_LISTING';
