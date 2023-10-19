@@ -1,19 +1,18 @@
 import React from "react";
 import { Link } from 'react-router-dom';
 import sampleImg from '../../../assets/example_card_image.png';
-// import StarIcon from '@mui/icons-material/Star';
+import StarIcon from '@mui/icons-material/Star';
 import './listingIndexItem.css';
 
 function ListingIndexItem ({listing}) {
     return (
         <>
             <Link to={`/listings/${listing.id}`} className="card">
-                <img className="card-img" src={sampleImg}/>
+                <img className="card-img" src={listing.photoUrl}/>
                 <div className="top-card-info">
                     <p className="card-title">{listing.location}</p>
                     <div className="card-rating">
-                        {/* {}add icons */}
-                        <p className="star-icon"/>
+                        <StarIcon className="star-icon"/>
                         <p className="rating-number">3.5</p>
                     </div>
                 </div>
