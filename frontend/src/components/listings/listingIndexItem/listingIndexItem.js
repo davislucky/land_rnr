@@ -10,6 +10,10 @@ import { getReviews } from "../../../store/reviews";
 function ListingIndexItem ({listing}) {
     const reviews = useSelector(getReviews);
 
+    if (listing.averageReview === null) {
+        listing.averageReview = 0;
+    }
+
     return (
         <>
             <Link to={`/listings/${listing.id}`} className="card">
