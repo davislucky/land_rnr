@@ -22,7 +22,7 @@ function ListingIndexItem ({listing}) {
                     <p className="card-title">{listing.location}</p>
                     <div className="card-rating">
                         <StarIcon className="star-icon"/>
-                        <p className="rating-number">{listing.averageReview.toFixed(2)}</p>
+                        <p className="rating-number">{listing.averageReview ? listing.averageReview.toFixed(2) : 0}</p>
                     </div>
                 </div>
                 <div className="middle-card-info">
