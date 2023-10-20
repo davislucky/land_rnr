@@ -1,12 +1,11 @@
 json.listing do
-    json.extract! @listing, :id, :title, :price, :location, :description, :num_beds, :num_guests
+    json.extract! @listing, :id, :title, :price, :location, :description, :num_beds, :num_guests, :type, :ac, :heating, :parking
     json.average_review @listing.get_average
+    json.host_fname @listing.host.first_name
+    json.host_lname @listing.host.last_name
+    json.photoUrl @listing.photo.attached? ? @listing.photo.url : nil
 end
 
-
-# json.listing do
-#     json.extract! @listing, :id, :title, :price, :location, :description, :num_beds, :num_guests
-# end
 
 reviews = @listing.reviews.includes(:listing)
 json.reviews do
@@ -16,3 +15,4 @@ json.reviews do
         end
     end
 end
+

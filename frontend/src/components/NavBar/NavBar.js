@@ -28,10 +28,10 @@ const NavBar = () => {
             </div>
             <div className="session-container">
                 <div className="github-link">
-                    <FontAwesomeIcon className="github-icon" icon={faGithub} style={{color: "#ff2600",}} />
+                    <a href="https://github.com/davislucky"><FontAwesomeIcon className="github-icon" icon={faGithub} style={{color: "#ff2600",}} /></a>
                 </div>
                 <div className="linkedin-link">
-                    <FontAwesomeIcon className="linkedin-icon" icon={faLinkedin} style={{color: "#ff2600",}} />
+                    <a href="https://www.linkedin.com/in/davis-lucky/"><FontAwesomeIcon className="linkedin-icon" icon={faLinkedin} style={{color: "#ff2600",}} /></a>
                 </div>
                 <div className="profile-button" >
                     <ProfileButton />

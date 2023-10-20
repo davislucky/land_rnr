@@ -5,6 +5,7 @@ import { Route, Switch } from "react-router-dom";
 import ListingShowPage from "./components/listings/listingShow/listingShow";
 import UserShow from "./components/userShow";
 import EditReviewForm from "./components/listings/listingShow/listingShowComponents/editReviewForm";
+import CreateReview from "./components/listings/listingShow/listingShowComponents/createReview";
 
 function App() {
   return (
@@ -23,6 +24,9 @@ function App() {
         </Route>
         <Route exact path="/reviews/:reviewId">
           <EditReviewForm />
+        </Route>
+        <Route exact path="/reviews/new">
+          <CreateReview />
         </Route>
       </Switch>
     </>

@@ -9,6 +9,7 @@ import { useDispatch, useSelector } from "react-redux";
 function Checkout ({listing}) {
     const dispatch = useDispatch();
     const currentUser = useSelector(state => state.session.user);
+    const reviews = useSelector(state => Object.keys(state.reviews));
     const [numGuests, setNumGuests] = useState(0);
     const [checkIn, setCheckIn] = useState('');
     const [checkOut, setCheckOut] = useState('');
@@ -52,8 +53,8 @@ function Checkout ({listing}) {
                 <p>${listing.price} night</p>
                 <div className="header-review-info">
                     <StarIcon className="review-icon"/>
-                    <p className="review-average">4.78</p>
-                    <p className="review-number">42 reviews</p>
+                    <p className="review-average">{listing.averageReview.toFixed(2)}</p>
+                    <p className="review-number">{reviews.length} reviews</p>
                 </div>
             </div>
             <input 

@@ -11,9 +11,17 @@ function ListingShowInfo ( {listing} ) {
             </div>
             <div className="info-container">
                 <div className="amenities">
-                    {
-                        Object.keys(listing).map((amenity, idx) => <p key={idx}>{amenity}</p>)
-                    }
+                    <div>
+                        <div>
+                            <p>{listing.parking}</p>    
+                        </div>
+                        <div>
+                            <p>{listing.heating}</p>    
+                        </div>
+                        <div>
+                            <p>{listing.ac}</p>    
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

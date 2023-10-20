@@ -51,47 +51,234 @@ require "open-uri"
     )
 
     puts "Creating listings..."
+    LISTING_TYPE = ["cabin", "mansion", "apartment", "house", "private room"]
 
     listings = [
         { 
             description: "In the heart of downtown San Francisco, La Monarca is a Kasa original within walking distance of Union Square, Market Street, and Chinatown. Built in 1915, this historic property in the Nob Hill neighborhood is surrounded by Victorian architecture and upscale dining. Experience the City by the Bay the right way!",
             title: "Beach House with amazing view",
             location: "Tiburon, California",
-            price: 50,
+            price: 250,
             host_id: 1,
-            num_beds: 2,
-            num_guests: 2,
-            photo_url: 'https://land-rnr-seeds.s3.us-west-1.amazonaws.com/land-rnr-seed-photos/seed1.jpeg'
+            num_beds: 4,
+            num_guests: 5,
+            photo_url: 'https://land-rnr-seeds.s3.us-west-1.amazonaws.com/land-rnr-seed-photos/seed1.jpeg',
+            parking: true,
+            heating: true,
+            ac: true
+            # type: LISTING_TYPE.sample
         },
         {
             description: "In the heart of downtown San Francisco, La Monarca is a Kasa original within walking distance of Union Square, Market Street, and Chinatown. Built in 1915, this historic property in the Nob Hill neighborhood is surrounded by Victorian architecture and upscale dining. Experience the City by the Bay the right way!",
             title: "Not a house",
             location: "Los Angeles, California",
-            price: 50,
-            host_id: 1,
-            num_beds: 2,
+            price: 149,
+            host_id: 3,
+            num_beds: 3,
             num_guests: 2,
-            photo_url: 'https://land-rnr-seeds.s3.us-west-1.amazonaws.com/land-rnr-seed-photos/seed2.jpeg'
+            photo_url: 'https://land-rnr-seeds.s3.us-west-1.amazonaws.com/land-rnr-seed-photos/seed2.jpeg',
+            parking: true,
+            heating: true,
+            ac: true
+            # type: LISTING_TYPE.sample
         },
         {
             description: "In the heart of downtown San Francisco, La Monarca is a Kasa original within walking distance of Union Square, Market Street, and Chinatown. Built in 1915, this historic property in the Nob Hill neighborhood is surrounded by Victorian architecture and upscale dining. Experience the City by the Bay the right way!",
             title: "This is a 'seedy' place",
             location: "Ontario, California",
-            price: 50,
-            host_id: 1,
+            price: 160,
+            host_id: 3,
             num_beds: 2,
-            num_guests: 2,
-            photo_url: 'https://land-rnr-seeds.s3.us-west-1.amazonaws.com/land-rnr-seed-photos/seed3.jpeg'
+            num_guests: 3,
+            photo_url: 'https://land-rnr-seeds.s3.us-west-1.amazonaws.com/land-rnr-seed-photos/seed3.jpeg',
+            parking: true,
+            heating: true,
+            ac: true
+            # type: LISTING_TYPE.sample
         }, 
         {
             description: "In the heart of downtown San Francisco, La Monarca is a Kasa original within walking distance of Union Square, Market Street, and Chinatown. Built in 1915, this historic property in the Nob Hill neighborhood is surrounded by Victorian architecture and upscale dining. Experience the City by the Bay the right way!",
             title: "Call me a tree with all these seeds",
             location: "San Francisco, California",
-            price: 50,
+            price: 175,
+            host_id: 4,
+            num_beds: 2,
+            num_guests: 2,
+            photo_url: 'https://land-rnr-seeds.s3.us-west-1.amazonaws.com/land-rnr-seed-photos/seed4.jpeg',
+            # type: LISTING_TYPE.sample,
+            parking: true,
+            heating: true,
+            ac: true
+        },
+        {
+            description: "In the heart of downtown San Francisco, La Monarca is a Kasa original within walking distance of Union Square, Market Street, and Chinatown. Built in 1915, this historic property in the Nob Hill neighborhood is surrounded by Victorian architecture and upscale dining. Experience the City by the Bay the right way!",
+            title: "Call me a tree with all these seeds",
+            location: "San Francisco, California",
+            price: 40,
+            host_id: 1,
+            num_beds: 1,
+            num_guests: 1,
+            photo_url: 'https://land-rnr-seeds.s3.us-west-1.amazonaws.com/land-rnr-seed-photos/seed20.jpeg',
+            # type: LISTING_TYPE.sample,
+            parking: true,
+            heating: true,
+            ac: true
+        },
+        {
+            description: "In the heart of downtown San Francisco, La Monarca is a Kasa original within walking distance of Union Square, Market Street, and Chinatown. Built in 1915, this historic property in the Nob Hill neighborhood is surrounded by Victorian architecture and upscale dining. Experience the City by the Bay the right way!",
+            title: "Call me a tree with all these seeds",
+            location: "San Francisco, California",
+            price: 500,
+            host_id: 2,
+            num_beds: 7,
+            num_guests: 7,
+            photo_url: 'https://land-rnr-seeds.s3.us-west-1.amazonaws.com/land-rnr-seed-photos/seed6.jpeg',
+            # type: LISTING_TYPE.sample,
+            parking: true,
+            heating: true,
+            ac: true
+        },
+        {
+            description: "In the heart of downtown San Francisco, La Monarca is a Kasa original within walking distance of Union Square, Market Street, and Chinatown. Built in 1915, this historic property in the Nob Hill neighborhood is surrounded by Victorian architecture and upscale dining. Experience the City by the Bay the right way!",
+            title: "Call me a tree with all these seeds",
+            location: "San Francisco, California",
+            price: 845,
+            host_id: 3,
+            num_beds: 4,
+            num_guests: 4,
+            photo_url: 'https://land-rnr-seeds.s3.us-west-1.amazonaws.com/land-rnr-seed-photos/seed7.jpeg',
+            # type: LISTING_TYPE.sample,
+            parking: true,
+            heating: true,
+            ac: true
+        }, 
+        {
+            description: "In the heart of downtown San Francisco, La Monarca is a Kasa original within walking distance of Union Square, Market Street, and Chinatown. Built in 1915, this historic property in the Nob Hill neighborhood is surrounded by Victorian architecture and upscale dining. Experience the City by the Bay the right way!",
+            title: "Call me a tree with all these seeds",
+            location: "San Francisco, California",
+            price: 132,
+            host_id: 4,
+            num_beds: 2,
+            num_guests: 4,
+            photo_url: 'https://land-rnr-seeds.s3.us-west-1.amazonaws.com/land-rnr-seed-photos/seed8.jpeg',
+            # type: LISTING_TYPE.sample,
+            parking: true,
+            heating: true,
+            ac: true
+        }, 
+        {
+            description: "In the heart of downtown San Francisco, La Monarca is a Kasa original within walking distance of Union Square, Market Street, and Chinatown. Built in 1915, this historic property in the Nob Hill neighborhood is surrounded by Victorian architecture and upscale dining. Experience the City by the Bay the right way!",
+            title: "Call me a tree with all these seeds",
+            location: "San Francisco, California",
+            price: 179,
+            host_id: 1,
+            num_beds: 4,
+            num_guests: 3,
+            photo_url: 'https://land-rnr-seeds.s3.us-west-1.amazonaws.com/land-rnr-seed-photos/seed9.jpeg',
+            # type: LISTING_TYPE.sample,
+            parking: true,
+            heating: true,
+            ac: true
+        }, 
+        {
+            description: "In the heart of downtown San Francisco, La Monarca is a Kasa original within walking distance of Union Square, Market Street, and Chinatown. Built in 1915, this historic property in the Nob Hill neighborhood is surrounded by Victorian architecture and upscale dining. Experience the City by the Bay the right way!",
+            title: "Call me a tree with all these seeds",
+            location: "San Francisco, California",
+            price: 223,
+            host_id: 2,
+            num_beds: 3,
+            num_guests: 5,
+            photo_url: 'https://land-rnr-seeds.s3.us-west-1.amazonaws.com/land-rnr-seed-photos/seed10.jpeg',
+            # type: LISTING_TYPE.sample,
+            parking: true,
+            heating: true,
+            ac: true
+        }, 
+        {
+            description: "In the heart of downtown San Francisco, La Monarca is a Kasa original within walking distance of Union Square, Market Street, and Chinatown. Built in 1915, this historic property in the Nob Hill neighborhood is surrounded by Victorian architecture and upscale dining. Experience the City by the Bay the right way!",
+            title: "Call me a tree with all these seeds",
+            location: "San Francisco, California",
+            price: 54,
+            host_id: 3,
+            num_beds: 2,
+            num_guests: 2,
+            photo_url: 'https://land-rnr-seeds.s3.us-west-1.amazonaws.com/land-rnr-seed-photos/seed11.jpeg',
+            # type: LISTING_TYPE.sample,
+            parking: true,
+            heating: true,
+            ac: true
+        }, 
+        {
+            description: "In the heart of downtown San Francisco, La Monarca is a Kasa original within walking distance of Union Square, Market Street, and Chinatown. Built in 1915, this historic property in the Nob Hill neighborhood is surrounded by Victorian architecture and upscale dining. Experience the City by the Bay the right way!",
+            title: "Call me a tree with all these seeds",
+            location: "San Francisco, California",
+            price: 90,
+            host_id: 4,
+            num_beds: 1,
+            num_guests: 2,
+            photo_url: 'https://land-rnr-seeds.s3.us-west-1.amazonaws.com/land-rnr-seed-photos/seed12.jpeg',
+            # type: LISTING_TYPE.sample,
+            parking: true,
+            heating: true,
+            ac: true
+        }, 
+        {
+            description: "In the heart of downtown San Francisco, La Monarca is a Kasa original within walking distance of Union Square, Market Street, and Chinatown. Built in 1915, this historic property in the Nob Hill neighborhood is surrounded by Victorian architecture and upscale dining. Experience the City by the Bay the right way!",
+            title: "Call me a tree with all these seeds",
+            location: "San Francisco, California",
+            price: 125,
             host_id: 1,
             num_beds: 2,
             num_guests: 2,
-            photo_url: 'https://land-rnr-seeds.s3.us-west-1.amazonaws.com/land-rnr-seed-photos/seed4.jpeg'
+            photo_url: 'https://land-rnr-seeds.s3.us-west-1.amazonaws.com/land-rnr-seed-photos/seed13.jpeg',
+            # type: LISTING_TYPE.sample,
+            parking: true,
+            heating: true,
+            ac: true
+        }, 
+        {
+            description: "In the heart of downtown San Francisco, La Monarca is a Kasa original within walking distance of Union Square, Market Street, and Chinatown. Built in 1915, this historic property in the Nob Hill neighborhood is surrounded by Victorian architecture and upscale dining. Experience the City by the Bay the right way!",
+            title: "Call me a tree with all these seeds",
+            location: "San Francisco, California",
+            price: 130,
+            host_id: 2,
+            num_beds: 3,
+            num_guests: 4,
+            photo_url: 'https://land-rnr-seeds.s3.us-west-1.amazonaws.com/land-rnr-seed-photos/seed14.jpeg',
+            # type: LISTING_TYPE.sample,
+            parking: true,
+            heating: true,
+            ac: true
+        },
+        {
+            description: "In the heart of downtown San Francisco, La Monarca is a Kasa original within walking distance of Union Square, Market Street, and Chinatown. Built in 1915, this historic property in the Nob Hill neighborhood is surrounded by Victorian architecture and upscale dining. Experience the City by the Bay the right way!",
+            title: "Call me a tree with all these seeds",
+            location: "San Francisco, California",
+            price: 700,
+            host_id: 3,
+            num_beds: 6,
+            num_guests: 12,
+            photo_url: 'https://land-rnr-seeds.s3.us-west-1.amazonaws.com/land-rnr-seed-photos/seed15.jpeg',
+            # type: LISTING_TYPE.sample,
+            parking: true,
+            heating: true,
+            ac: true
+        },
+        {
+        
+            description: "In the heart of downtown San Francisco, La Monarca is a Kasa original within walking distance of Union Square, Market Street, and Chinatown. Built in 1915, this historic property in the Nob Hill neighborhood is surrounded by Victorian architecture and upscale dining. Experience the City by the Bay the right way!",
+            title: "Call me a tree with all these seeds",
+            location: "San Francisco, California",
+            price: 250,
+            host_id: 3,
+            num_beds: 4,
+            num_guests: 5,
+            photo_url: 'https://land-rnr-seeds.s3.us-west-1.amazonaws.com/land-rnr-seed-photos/seed16.jpeg',
+            # type: LISTING_TYPE.sample,
+            parking: true,
+            heating: true,
+            ac: true
+        
         }
     ]
 
@@ -104,6 +291,10 @@ require "open-uri"
             host_id: listing_data[:host_id],
             num_beds: listing_data[:num_beds],
             num_guests: listing_data[:num_guests],
+            # type: listing_data[:type],
+            parking: listing_data[:parking],
+            heating: listing_data[:heating],
+            ac: listing_data[:ac]
         )
 
         product.photo.attach(
@@ -116,10 +307,10 @@ require "open-uri"
 
     puts "Creating reviews..."
 
-    50.times do 
+    75.times do 
          Review.create(
             author_id: Faker::Number.between(from: 1, to: 5),
-            listing_id: Faker::Number.between(from: 1, to: 4), 
+            listing_id: Faker::Number.between(from: 1, to: listings.length), 
             cleanliness: Faker::Number.between(from: 1, to: 5),
             communication: Faker::Number.between(from: 1, to: 5),
             check_in: Faker::Number.between(from: 1, to: 5),

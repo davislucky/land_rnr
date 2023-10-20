@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { getReviews } from "../../../../store/reviews";
 import EditButton from "./editReview";
 import { deleteReview } from "../../../../store/reviews";
+import { Link } from "react-router-dom";
 
 function Reviews( {listing} ) {
     // const dispatch = useDispatch();
@@ -13,6 +14,9 @@ function Reviews( {listing} ) {
         return (
             <>
                 <h1>Reviews for {listing.title}</h1>
+                <Link to={`/reviews/new`}>
+                    <button>Leave a review</button>
+                </Link>
                 <ul>
                    {
                     reviews.map(review => <li key={review.id}>

@@ -22,7 +22,7 @@ function ListingIndexItem ({listing}) {
                     </div>
                 </div>
                 <div className="middle-card-info">
-                    <p className="filter-info">Mountain and Ocean Views</p>
+                    <p className="filter-info">Comfy and cozy</p>
                     <p className="card-price">${listing.price} night</p>
                 </div>
                 <div className="bottom-card-info">

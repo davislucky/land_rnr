@@ -1,4 +1,4 @@
-/* .checkout-box {
+.checkout-box {
     display: flex;
     position: sticky;
     top: 6rem;
@@ -10,7 +10,7 @@
     border: 1px solid var(--grey);
     border-radius: 15px;
     box-shadow: rgba(0, 0, 0, 0.12) 0px 6px 16px;
-} */
+}
 
 .checkout-header {
     display: flex;

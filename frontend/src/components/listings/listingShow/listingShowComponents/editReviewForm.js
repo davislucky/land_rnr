@@ -12,7 +12,7 @@ function EditReviewForm() {
     const dispatch = useDispatch();
     const review = useSelector(getReview(reviewId));
     const [updatedReview, setUpdateReview] = useState({
-        id: review.id,
+        id: reviewId,
         author_id: review.authorId,
         listing_id: review.listingId,
         location: review.location,
@@ -36,7 +36,7 @@ function EditReviewForm() {
     
     return (
         <>
-            <h1>hello from </h1>
+            <h1>Edit your review</h1>
             <div className="edit-review-container">
                 <label> Cleanliness
                     <input type="number" value={updatedReview.cleanliness} onChange={handleChange('cleanliness')}/>
@@ -60,9 +60,11 @@ function EditReviewForm() {
                     <textarea defaultValue={updatedReview.blurb} onChange={handleChange('blurb')} rows={5} cols={30}/>
                 </label>
             </div>
-            <Link to={`/`}>
-                <button onClick={handleEdit}>Finish editing</button>
-            </Link>
+            <div>
+                <Link to='/'>
+                    <button onClick={handleEdit}>Finish editing</button>
+                </Link>
+            </div>
         </>
     )
 }

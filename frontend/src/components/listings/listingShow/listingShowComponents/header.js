@@ -7,7 +7,7 @@ import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import './header.css'
 
 function ListingHeader( {listing} ) {
-
+    const reviews = useSelector(state => Object.keys(state.reviews));
 
     return (
         <div className="header-container">
@@ -16,8 +16,8 @@ function ListingHeader( {listing} ) {
                 <div className="header-links">
                     <div className="header-review-info">
                         <StarIcon className="review-icon"/>
-                        <p className="review-average">4.78</p>
-                        <p className="review-number">42 reviews</p>
+                        <p className="review-average">{listing.averageReview.toFixed(2)}</p>
+                        <p className="review-number">{reviews.length} reviews</p>
                         <p>{listing.location}</p>
                     </div>
                     <div className="share-save-buttons">
@@ -33,16 +33,16 @@ function ListingHeader( {listing} ) {
                 </div>
             </div>
             <div className="images-container">
-                <img className="main-image" src={sampleImg}/>
+                <img className="main-image" src={listing.photoUrl}/>
                 <div className="sub-images-container">
-                    <img className="sub-image" src={sampleImg}/>
-                    <img className="sub-image" src={sampleImg}/>
-                    <img className="sub-image" src={sampleImg}/>
-                    <img className="sub-image" src={sampleImg}/>
+                    <img className="sub-image" src={listing.photoUrl}/>
+                    <img className="sub-image" src={listing.photoUrl}/>
+                    <img className="sub-image" src={listing.photoUrl}/>
+                    <img className="sub-image" src={listing.photoUrl}/>
                 </div>
             </div>
             <div className="hosting-info">
-                <p className="host-name">Hosted by host.name</p>
+                <p className="host-name">Hosted by {listing.hostFname} {listing.hostLname}</p>
                 <p className="num-guests">{listing.numGuests} guests</p>
                 <p className="num-beds">{listing.numBeds} beds</p>
             </div>
