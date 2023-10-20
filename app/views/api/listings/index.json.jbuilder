@@ -2,6 +2,6 @@
     json.set! listing.id do
         json.extract! listing, :id, :title, :price, :location, :type
         json.photoUrl listing.photo.attached? ? listing.photo.url : nil
-        json.average_review listing.get_average
+        json.averageReview listing.get_average
     end
 end
