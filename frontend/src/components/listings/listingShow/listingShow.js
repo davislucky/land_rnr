@@ -18,7 +18,7 @@ function ListingShowPage() {
 
     useEffect(() => {
         dispatch(fetchListing(listingId));
-    }, [listingId, dispatch]);
+    }, []);
 
     return listing ? (
         <>

@@ -32,6 +32,7 @@ export const fetchListings = () => async (dispatch) => {
     if (res.ok) {
         const listings = await res.json();
         dispatch(receiveListings(listings));
+        // dispatch(receiveReviews(listings.reviews));
     }
 }
 
@@ -39,8 +40,9 @@ export const fetchListing = (listingId) => async (dispatch) => {
     const res = await csrfFetch(`/api/listings/${listingId}`);
 
     if (res.ok) {
-        const listing = await res.json();
-        dispatch(receiveListing(listing));
+        const data = await res.json();
+        dispatch(receiveListing(data.listing));
+        dispatch(receiveReviews(data.reviews));
     }
 }
 

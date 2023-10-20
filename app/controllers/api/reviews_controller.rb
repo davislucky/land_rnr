@@ -27,13 +27,13 @@ class Api::ReviewsController < ApplicationController
             @review.delete
             render :show
         else
-            render json: { errors: @review.errors.full_messages}, status: 422
+            render json: ['errors']
         end
     end
 
     private
 
     def review_params
-        params.require(:review).permit(:author_id, :listing_id, :blurb, :cleanliness, :accuracy, :communication, :location, :value, :check_in)
+        params.require(:review).permit(:author_id, :listing_id, :blurb, :cleanliness, :accuracy, :communication, :location, :value, :check_in, :id)
     end
 end

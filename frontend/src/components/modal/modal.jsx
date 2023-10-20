@@ -5,6 +5,7 @@ import SignupForm from '../SessionForm/SignupForm';
 import { useSelector, useDispatch } from 'react-redux';
 import './modal.css'
 import CloseIcon from '@mui/icons-material/Close';
+import EditReviewForm from '../listings/listingShow/listingShowComponents/editReviewForm';
 
 
 function Modal() {
@@ -28,6 +29,9 @@ function Modal() {
         case 'signup':
             component = <SignupForm />;
             break;
+        case 'editReview':
+            component = <EditReviewForm />
+            break;
         default:
             return null;
     }
@@ -38,7 +42,7 @@ function Modal() {
             <div className='modal'>
                 <header className='modal-header'>
                     <CloseIcon className="close-button" onClick={handleClick}/>
-                    <h3>Welcome to Land RnR</h3>
+                    {/* <h3>Welcome to Land RnR</h3> */}
                 </header>
                 <div className='modal-child' onClick={(e) => e.stopPropagation()}>
                     { component }

@@ -1,4 +1,4 @@
-json.extract! @review, :author_id, :listing_id, :blurb, :cleanliness, :accuracy, :communication, :location, :value, :check_in
+json.extract! @review, :author_id, :listing_id, :blurb, :cleanliness, :accuracy, :communication, :location, :value, :check_in, :id
 
 author = @review.author
 

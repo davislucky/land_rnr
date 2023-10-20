@@ -34,4 +34,24 @@ class Listing < ApplicationRecord
     has_one_attached :photo
 
     has_many :reviews
+
+    def get_average
+        reviews = self.reviews
+
+        reviews.map{ |review| review.calculate_average}.sum / (reviews.length * 1.0)
+    end
+
+    # def self.rating 
+    #     score = 
+    #     arr = [];
+    #     reviews = @listing.reviews
+
+    #     reviews.each do |review|
+    #         arr.push(review)
+    #     end
+
+    #     arr.each do |review|
+    #         review.
+    #     end
+    # end
 end

@@ -25,4 +25,8 @@ class Review < ApplicationRecord
     belongs_to :listing,
         foreign_key: :listing_id,
         class_name: :Listing
+
+    def calculate_average
+        (location + cleanliness + accuracy + value + communication + check_in) / 6.0
+    end
 end

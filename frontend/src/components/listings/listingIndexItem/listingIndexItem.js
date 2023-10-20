@@ -3,9 +3,13 @@ import { Link } from 'react-router-dom';
 // import sampleImg from '../../../assets/example_card_image.png';
 import StarIcon from '@mui/icons-material/Star';
 import './listingIndexItem.css';
+import { useSelector } from "react-redux";
+import { getReviews } from "../../../store/reviews";
 
 
 function ListingIndexItem ({listing}) {
+    const reviews = useSelector(getReviews);
+
     return (
         <>
             <Link to={`/listings/${listing.id}`} className="card">
@@ -14,7 +18,7 @@ function ListingIndexItem ({listing}) {
                     <p className="card-title">{listing.location}</p>
                     <div className="card-rating">
                         <StarIcon className="star-icon"/>
-                        <p className="rating-number">3.5</p>
+                        <p className="rating-number">{listing.averageReview.toFixed(2)}</p>
                     </div>
                 </div>
                 <div className="middle-card-info">
