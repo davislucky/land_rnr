@@ -16,7 +16,7 @@ function ListingHeader( {listing} ) {
                 <div className="header-links">
                     <div className="header-review-info">
                         <StarIcon className="review-icon"/>
-                        <p className="review-average">{listing.averageReview.toFixed(2)}</p>
+                        <p className="review-average">{listing.averageReview ? listing.averageReview.toFixed(2) : 0}</p>
                         <p className="review-number">{reviews.length} reviews</p>
                         <p>{listing.location}</p>
                     </div>

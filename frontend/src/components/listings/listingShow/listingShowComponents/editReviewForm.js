@@ -5,11 +5,13 @@ import { fetchReview, getReview } from "../../../../store/reviews";
 import { useState } from "react";
 import { updateReview } from "../../../../store/reviews";
 import { Link } from "react-router-dom";
+import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 
 
 function EditReviewForm() {
     const { reviewId } = useParams();
     const dispatch = useDispatch();
+    const history = useHistory();
     const review = useSelector(getReview(reviewId));
     const [updatedReview, setUpdateReview] = useState({
         id: reviewId,
@@ -27,6 +29,7 @@ function EditReviewForm() {
     const handleEdit = e => {
         e.preventDefault();
         dispatch(updateReview(updatedReview));
+        history.push(`/listings/${updatedReview.listing_id}`)
     }
 
     const handleChange = field => e => {
@@ -61,9 +64,7 @@ function EditReviewForm() {
                 </label>
             </div>
             <div>
-                <Link to='/'>
-                    <button onClick={handleEdit}>Finish editing</button>
-                </Link>
+                <button onClick={handleEdit}>Finish editing</button>
             </div>
         </>
     )
