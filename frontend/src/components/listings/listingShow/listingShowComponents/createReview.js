@@ -37,7 +37,7 @@ function CreateReview() {
         <>
             <h1>Create a review</h1>
             <div className="edit-review-container">
-                <label> Cleanliness:
+                <label> Cleanliness
                     <input type="number" value={newReview.cleanliness} onChange={handleChange('cleanliness')}/>
                 </label>
                 <label> Accuracy:
