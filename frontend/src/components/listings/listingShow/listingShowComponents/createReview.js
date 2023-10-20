@@ -37,22 +37,22 @@ function CreateReview() {
         <>
             <h1>Create a review</h1>
             <div className="edit-review-container">
-                <label> Cleanliness
+                <label> Cleanliness:
                     <input type="number" value={newReview.cleanliness} onChange={handleChange('cleanliness')}/>
                 </label>
-                <label> Accuracy
+                <label> Accuracy:
                     <input type="number" value={newReview.accuracy} onChange={handleChange('accuracy')}/>
                 </label>
-                <label> Communication
+                <label> Communication:
                     <input type="number" value={newReview.communication} onChange={handleChange('communication')}/>
                 </label>
-                <label> Value
+                <label> Value:
                     <input type="number" value={newReview.value} onChange={handleChange('value')}/>
                 </label>
-                <label> Check-in
+                <label> Check-in:
                     <input type="number" value={newReview.check_in} onChange={handleChange('check_in')}/>
                 </label>
-                <label> Location
+                <label> Location:
                     <input type="number" value={newReview.location} onChange={handleChange('location')}/>
                 </label>
                 <label> Your review:
